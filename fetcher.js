@@ -10,9 +10,7 @@ const fetch = (argsArr) => {
 			console.log(`Error happened, please check URL`);
 			return;
 		}
-  // console.log('error:', error); 
  console.log('statusCode:', response && response.statusCode);
-		// console.log('body:', body);
 		fs.writeFile(argsArr[1], body, (error) => {
       if (error) {
 				console.log('Failed to write to file, please check local file path');
